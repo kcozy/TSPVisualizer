@@ -6,10 +6,11 @@ public:
     void readFile(int argc, char** argv);
     int** GetCity();
     int GetNUMBEROFCITES();
-    void showCity(int** city, int color);
+    void showCity(int argc, char** argv, int* tour, int color);
 private:
     void initCity();
     int** CITY;
+    
     int N;
 };
 
