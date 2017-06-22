@@ -35,3 +35,6 @@
 
 # TSP problems
 *.tsp
+
+# vscode settings
+/.vscode/

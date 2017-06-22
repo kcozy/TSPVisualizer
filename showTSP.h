@@ -3,15 +3,20 @@
 
 class showTSP {
 public:
-    void readFile(int argc, char** argv);
-    int** GetCity();
-    int GetNUMBEROFCITES();
-    void showCity(int argc, char** argv, int* tour, int color);
+    showTSP(int n, int** city);
+    virtual ~showTSP();
+
+    void initGL(int argc, char** argv);
+    void showCity(int* route, int color);
+
 private:
-    void initCity();
-    int** CITY;
-    
-    int N;
+    int Highest();
+    void MakeDisplayPosition();
+
+    int** CITIES;
+    double** DispCITIES;
+    int* ROUTE;
+    int NUMBEROFCITIES;
 };
 
 #endif
