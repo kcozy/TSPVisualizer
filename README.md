@@ -1,5 +1,5 @@
 # TSPVisualizer
-- Visualize Traveling Salesman Problem(TSP) & Inport TSP from file
+- Visualize Traveling Salesman Problem(TSP) & Import TSP from file
 - Using C++ with OpenGL
 
 ## File Format
