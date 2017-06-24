@@ -2,6 +2,9 @@
 #include "showTSP.h"
 #include "readTSPLIB.h"
 
+#include <OpenGL/OpenGL.h>
+#include <GLUT/GLUT.h>
+
 using namespace std;
 
 int** city;
@@ -18,7 +21,6 @@ int main(int argc, char** argv) {
     s->initGL(argc, argv);
 
     // solve TSP here
-    // to show process, s->showCity(CurrentRoute, color); 
 
     // sample route
     int tour[N];
@@ -26,5 +28,9 @@ int main(int argc, char** argv) {
         tour[i] = i+1;
     }
     tour[N-1] = 0;
-    s->showCity(tour, 0);
+    s->showRoute(tour);
+    s->showBest(tour);
+
+    s->showText(1.0);
+    glutMainLoop();
 }

@@ -63,7 +63,6 @@ void readTSPLIB::readFile(int argc, char **argv)
         {
             CITY[atoi(index.c_str()) - 1][0] = atoi(arg_first.c_str());
             CITY[atoi(index.c_str()) - 1][1] = atoi(arg_second.c_str());
-            //std::cout << atoi(arg_first.c_str()) << " " << atoi(arg_second.c_str()) << std::endl;
         }
     }
 }

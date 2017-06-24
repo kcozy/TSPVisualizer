@@ -7,7 +7,11 @@ public:
     virtual ~showTSP();
 
     void initGL(int argc, char** argv);
-    void showCity(int* route, int color);
+
+    void showRoute(int* route);
+    void showBest(int* route);
+    void showPheromones(double** pheromones);
+    void showText(double length);
 
 private:
     int Highest();
@@ -15,7 +19,6 @@ private:
 
     int** CITIES;
     double** DispCITIES;
-    int* ROUTE;
     int NUMBEROFCITIES;
 };
 
