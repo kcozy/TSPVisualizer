@@ -16,6 +16,7 @@ public:
 private:
     int Highest();
     void MakeDisplayPosition();
+    //void display();
 
     int** CITIES;
     double** DispCITIES;

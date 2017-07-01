@@ -7,11 +7,6 @@
 #include <OpenGL/OpenGL.h>
 #include <GLUT/GLUT.h>
 
-typedef struct{
-    // R,G,B must be [0,1]
-    double R,G,B;
-}COLOR;
-
 int width, height;
 int* CurrentRoute;
 int* BestRoute;
@@ -175,8 +170,14 @@ void showTSP::MakeDisplayPosition() {
     }
 }
 
-void timer(int value) {
+void update() {
     glutPostRedisplay();
+}
+
+void timer(int value) {
+    /* 画面を再描写 */
+    glutPostRedisplay();
+    /* 100ミリ秒後に再実行 */
     glutTimerFunc(100, timer, 0);
 }
 
@@ -197,8 +198,9 @@ void showTSP::initGL(int argc, char** argv) {
 
     glutReshapeFunc(reshape);
     glutDisplayFunc(display);
-
-    glutTimerFunc(100, timer, 0);
+    glutIdleFunc(update);
+    //glutTimerFunc(100, timer, 0);
+    glutMainLoop();
 }
 
 void showTSP::showRoute(int* route) {
